@@ -29,6 +29,17 @@ function calculateSum(elementId){
     const price = parseInt(document.getElementById(elementId).innerText);
     return perTicket * price;
 }
+//input discount and total sum----
+document.getElementById('coupon').addEventListener('keyup',function(event){
+    const text=event.target.value;
+    //-----------------------------------
+   const userText= document.getElementById('btn');
+   if(text==='NEW50'){
+    userText.removeAttribute('disabled');
+   }else{
+    Deletebtn.setAttribute('disabled',true);
+   }
+});
 
 function play(){
     console.log('test');
