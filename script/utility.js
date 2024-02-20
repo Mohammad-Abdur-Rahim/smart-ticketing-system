@@ -23,6 +23,10 @@ function hideElement(elementId) {
     element.classList.add('hidden');
 
 };
+function showElement(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+};
 //calculate product sum----
 function calculateSum(elementId){
     const perTicket = 550;
@@ -67,4 +71,9 @@ function result() {
 hideElement('ticket-section');
     const dResult = discount('PriceTotal');
     document.getElementById('grand-total').innerText = dResult;
+}
+function lastEnd(){
+const last = document.getElementById('last-next');
+hideElement('tSec');
+showElement('poup');
 }
