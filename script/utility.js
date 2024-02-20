@@ -64,6 +64,7 @@ function discount(elementId) {
 // SHOW 50%
 function result() {
     hideElement('input-h');
+hideElement('ticket-section');
     const dResult = discount('PriceTotal');
     document.getElementById('grand-total').innerText = dResult;
 }
