@@ -42,7 +42,6 @@ document.getElementById('coupon').addEventListener('keyup',function(event){
 });
 
 function play(){
-    console.log('test');
     setBackgroundColor('test-fn1');
     addItem('increase-seat');
     removeItem('decrease-seat');
@@ -52,4 +51,19 @@ function play(){
     const totalPrice = calculateSum('totalSum');
     document.getElementById('PriceTotal').innerText = totalPrice;
  
+}
+//50% discount 
+function discount(elementId) {
+    const sumOfTotalPrice = parseInt(document.getElementById(elementId).innerText);
+    const discount = 0.50; // 50%
+    const fDiscount = sumOfTotalPrice * discount;
+        return fDiscount;
+    
+}
+
+// SHOW 50%
+function result() {
+    hideElement('input-h');
+    const dResult = discount('PriceTotal');
+    document.getElementById('grand-total').innerText = dResult;
 }
